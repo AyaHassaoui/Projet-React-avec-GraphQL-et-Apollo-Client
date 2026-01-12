@@ -1,0 +1,1 @@
+import {useQuery} from '@apollo/client';import {GET_ALL_COMPTES} from '../graphql/queries';export default function(){const{data}=useQuery(GET_ALL_COMPTES);return <div>{data&&data.allComptes.map(c=><p key={c.id}>{c.id} {c.solde}</p>)}</div>}
